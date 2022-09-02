@@ -11,6 +11,7 @@ export default function MainContent() {
 
     React.useEffect(retrievePlayers, [0])
     React.useEffect(retrieveManagers, [0])
+    
 
     function retrievePlayers() {
         fetch("https://fantafavaro-api.herokuapp.com/index.php/get_players?token=p6h72m0zd3j38uqer&mode=buyed")
@@ -20,7 +21,6 @@ export default function MainContent() {
              setPlayers(data.data)
           })
     }
-
     function retrieveManagers() {
         fetch("https://fantafavaro-api.herokuapp.com/index.php/retrieve_managers?token=p6h72m0zd3j38uqer")
           .then(res => res.json())
