@@ -17,7 +17,6 @@ export default function MainContent() {
         fetch("https://fantafavaro-api.herokuapp.com/index.php/get_players?token=p6h72m0zd3j38uqer&mode=buyed")
           .then(res => res.json())
           .then(function(data) {
-             console.log(data)
              setPlayers(data.data)
           })
     }

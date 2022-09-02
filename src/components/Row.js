@@ -1,5 +1,4 @@
 export default function Row(props) {
-    console.log(props.player)
     function setRoleClass(role) {
 
         if(role == "Por") {
