@@ -38,6 +38,13 @@ export default function MainContent() {
             return player.manager === managerObj[0].id
         })
     }
+
+    let pbTot = 0
+    let cTot = 0
+    for(let i=0; i<selectedPlayers.length; i++) {
+        pbTot += selectedPlayers[i].prezzo_base
+        cTot += selectedPlayers[i].payed
+    }
     
 
     return (
@@ -51,7 +58,14 @@ export default function MainContent() {
                                                       manager={player.manager}
                                                  />
                                     )
-                }   
+                }
+                <div className="player-row">
+                    <div className="player-name"></div>
+                    <div className="player-team"></div>
+                    <div className="player-role">Totale</div>
+                    <div className="player-price">{pbTot}</div>
+                    <div className="player-payed-price">{cTot}</div>
+                </div>
         </div>
     )
 }

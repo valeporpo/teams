@@ -45,16 +45,7 @@ header nav ul.nav-items {
 
     display: flex;
     flex-direction: row;
-
-}
-
-@media screen and (max-width: 500px) {
-
-    header nav ul.nav-items {
-
-        display: none;
-
-    }
+    font-size: calc(12px + 2.5vw);
 
 }
 
@@ -62,7 +53,6 @@ header nav ul.nav-items > li {
 
     list-style-type: none;
     padding: 10px;
-    font-size: 40px;
     text-transform: uppercase;
     color: #303c6c;
 
