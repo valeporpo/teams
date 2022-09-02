@@ -50,6 +50,7 @@ export default function MainContent() {
         <div className='player-table'>
                 <Form managers={managers}
                       handle={setCurrentManager}
+                      refresh={retrievePlayers}
                 />
                 <TableHeader/>
                 {selectedPlayers.map((player) => <Row player={player}
